@@ -20,7 +20,7 @@ export const importToSegment = (
     throw new Error('No event types selected')
   }
 
-  const analytics = new Analytics(config.writeKey)
+  const analytics = new Analytics(config.writeKey,{host: 'https://events.eu1.segmentapis.com/'})
   const sortedTransformations = sortTransformations(config.transformationList)
   let counter = 0
   console.time()
